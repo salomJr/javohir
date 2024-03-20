@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 
 <head>
     <meta charset="UTF-8">
@@ -8,6 +7,18 @@
     <title>Document</title>
     <script src="tailwind/tailwind.js"></script>
     <link rel="stylesheet" href="spinner.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                darkMode: 'selector',
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body class="bg-white dark:bg-slate-900">
