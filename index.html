@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="tailwind/tailwind.js"></script>
+    <link rel="stylesheet" href="spinner.css">
+</head>
+
+<body class="bg-white dark:bg-slate-900">
+    <div
+        class="text-xl md:text-3xl font-semibold text-center text-cyan-500 h-20 mb-20 flex items-center justify-between shadow-md dark:shadow-white/10 px-8 sm:px-10 lg:px-24">
+        <h1>Fitered and Fetched Elements</h1>
+        <div>
+            <button id="sun">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                </svg>
+
+            </button>
+            <button id="moon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="flex flex-col pb-10 px-8 sm:px-10 lg:px-24 relative">
+        <div class="flex flex-col md:flex-row justify-between gap-4">
+            <select id="selectElements"
+                class="px-4 py-2 bg-transparent border outline-none rounded w-full md:w-52 dark:text-white dark:border-white/10 border-black/10">
+                <option class="text-slate-500 dark:text-slate-400 dark:bg-slate-900" value="all">all</option>
+                <option class="text-slate-500 dark:text-slate-400 dark:bg-slate-900" value="smartphones">smartphones
+                </option>
+                <option class="text-slate-500 dark:text-slate-400 dark:bg-slate-900" value="laptops">laptops</option>
+                <option class="text-slate-500 dark:text-slate-400 dark:bg-slate-900" value="furniture">furniture
+                </option>
+            </select>
+            <input id="searching" placeholder="Searching products..." type="text"
+                class=" bg-transparent border outline-none rounded w-full md:w-96 py-2 px-4 dark:border-white/10 border-black/10 dark:text-white dark:placeholder:text-white">
+        </div>
+
+        <div id="productsContiner" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-10">
+            <div
+                class="flex flex-col border dark:border-white/10 border-black/10 transition-all rounded-md overflow-hidden bg-white dark:bg-slate-800">
+                <div class="aspect-[3/2] w-full overflow-hidden cursor-pointer">
+                    <img class="w-full h-full object-cover object-center" src="./img/hp 1.jpeg" alt="">
+                </div>
+                <div class="flex flex-col p-4 gap-2">
+                    <h1 class="text-lg font-bold text-slate-900 dark:text-white">HP Probook</h1>
+                    <p class="font-semibold text-cyan-500">2000$</p>
+                    <p class='font-semibold text-slate-900 dark:text-white'><span class="font-semibold">Stock: </span>86
+                    </p>
+                    <p class="text-base text-slate-500 dark:text-slate-400">
+                        HP Probook 2021 with mini-LED display may
+                        launch between September, November
+                    </p>
+                    <button class="bg-cyan-500 text-white py-2 px-3 text-center rounded detail mt-auto">Deatils</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="detailContainer"
+        class="fixed hidden top-0 left-0 bottom-0 right-0 bg-white dark:bg-slate-900  px-8 sm:px-10 lg:px-24 pt-6 sm:pt-20">
+        <!-- <div
+            class="flex flex-col md:flex-row border dark:border-white/10 border-black/10 gap-3 shadow-md rounded-md overflow-hidden bg-white/10">
+            <div class='aspect-[3/2] flex-1  overflow-hidden cursor-pointer'>
+                <img class='w-full h-full object-cover object-center' src='./img/hp 1.jpeg' alt="" />
+            </div>
+            <div class="flex flex-col p-4 gap-2 pt-5 flex-1">
+                <h1 class='text-3xl font-bold text-slate-900 dark:text-white'>MacBook Pro</h1>
+                <p class='font-bold text-slate-900 dark:text-white'><span class="font-semibold">Brand: </span>Apple
+                </p>
+                <p class='font-semibold text-cyan-500'><span class="font-semibold">Price: </span>$2222</p>
+                <p class='font-semibold text-yellow-500'><span class="font-semibold">Stock: </span>86</p>
+                <p class='text-slate-500 dark:text-slate-400'><span class="font-semibold">Descritption:
+                    </span>MacBook Pro 2021 with mini-LED display may launch between September, November</p>
+                <button
+                    class="bg-red-500 text-white sm:w-32 py-2 px-3 text-center sm:ml-auto mt-auto rounded back">Back</button>
+            </div>
+        </div> -->
+    </div>
+
+
+    <div id="spinner" class="fixed flex w-full h-full top-0 left-0 backdrop-blur-md justify-center items-center">
+        <div class="half-circle-spinner">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+    <script src="dark.js"></script>
+</body>
+
+</html>
